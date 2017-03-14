@@ -1,0 +1,65 @@
+{
+  "id": "customIframe",
+  "name": "Iframe",
+  "template": "@template.tpl.html",
+  "controller": "@controller.ctrl.js",
+  "custom": true,
+  "properties": [
+    {
+      "label": "URL",
+      "name": "url",
+      "type": "text",
+      "help": "This is url of the page to display in the iFrame",
+      "bond": "expression"
+    },
+    {
+      "label": "Height",
+      "name": "height",
+      "type": "text",
+      "help": "Height of the iFrame in px",
+      "defaultValue": "400",
+      "bond": "expression"
+    },
+    {
+      "label": "Hidden",
+      "name": "hidden",
+      "type": "boolean",
+      "help": "Hide the widget",
+      "defaultValue": false,
+      "bond": "expression"
+    },
+    {
+      "label": "Label hidden",
+      "name": "labelHidden",
+      "type": "boolean",
+      "defaultValue": false,
+      "bond": "constant"
+    },
+    {
+      "label": "Label",
+      "name": "label",
+      "showFor": "properties.labelHidden.value === false",
+      "type": "text",
+      "defaultValue": "Default label",
+      "bond": "interpolation"
+    },
+    {
+      "label": "Label position",
+      "name": "labelPosition",
+      "showFor": "properties.labelHidden.value === false",
+      "type": "choice",
+      "defaultValue": "top",
+      "choiceValues": [
+        "left",
+        "top"
+      ],
+      "bond": "constant"
+    }
+  ],
+  "assets": [
+    {
+      "name": "style.css",
+      "type": "css"
+    }
+  ]
+}

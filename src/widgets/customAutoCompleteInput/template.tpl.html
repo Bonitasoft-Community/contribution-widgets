@@ -1,0 +1,25 @@
+<div ng-class="{
+    'form-horizontal': properties.labelPosition === 'left' && !properties.labelHidden,
+    'row': properties.labelPosition === 'top' && !properties.labelHidden || properties.labelHidden
+    }">
+    <div class="form-group">
+        <label
+            ng-if="!properties.labelHidden"
+            ng-class="{ 'control-label--required': properties.required }"
+            class="control-label col-xs-{{ !properties.labelHidden && properties.labelPosition === 'left' ? properties.labelWidth : 12 }}">
+            {{ properties.label | uiTranslate }}
+        </label>
+        <div class="col-xs-{{ 12 - (!properties.labelHidden && properties.labelPosition === 'left' ? properties.labelWidth : 0) }}" >
+            <input
+                type="text"
+                class="form-control"
+                placeholder="{{ properties.placeholder | uiTranslate }}"
+                uib-typeahead="item as ctrl.getLabel(item) for item in properties.availableValues | filter:$viewValue | limitTo:8"        
+                ng-model-options="{ getterSetter: true }"
+                ng-model="ctrl.formattedValue"
+                name="{{ctrl.name}}"
+                ng-required="properties.required"
+                ng-readonly="properties.readOnly">
+        </div>
+    </div>
+</div>

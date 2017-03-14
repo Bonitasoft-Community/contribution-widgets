@@ -1,0 +1,46 @@
+{
+  "id": "customWidget",
+  "name": "Widget",
+  "template": "@template.tpl.html",
+  "controller": "@controller.ctrl.js",
+  "custom": true,
+  "properties": [
+    {
+      "label": "Value",
+      "name": "value",
+      "type": "text",
+      "defaultValue": "This is the initial value",
+      "bond": "expression"
+    },
+    {
+      "label": "Color",
+      "name": "color",
+      "type": "choice",
+      "defaultValue": "RebeccaPurple",
+      "choiceValues": [
+        "RebeccaPurple",
+        "Chartreuse",
+        "Tomato",
+        "DeepSkyBlue"
+      ],
+      "bond": "expression"
+    },
+    {
+      "label": "Background color on click",
+      "name": "background",
+      "type": "choice",
+      "defaultValue": "Yellow",
+      "choiceValues": [
+        "Yellow",
+        "LightGray"
+      ],
+      "bond": "expression"
+    }
+  ],
+  "assets": [
+    {
+      "name": "style.css",
+      "type": "css"
+    }
+  ]
+}

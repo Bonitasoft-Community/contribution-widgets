@@ -1,0 +1,10 @@
+<!-- The custom widget template is defined here
+   - You can use standard HTML tags and AngularJS built-in directives, scope and interpolation system
+   - Custom widget properties defined on the right can be used as variables in a templates with properties.newProperty
+   - Functions exposed in the controller can be used with ctrl.newFunction()
+ -->
+
+<div style="color: {{ properties.color }}; background-color: {{ backgroudColor }}"
+     ng-click="ctrl.toggleBackgroundColor()">
+    Value is: <i>{{ properties.value }}</i>. Click me to toggle background color
+</div>

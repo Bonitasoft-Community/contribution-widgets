@@ -1,0 +1,92 @@
+{
+  "id": "customMap",
+  "name": "Map",
+  "template": "@template.tpl.html",
+  "controller": "@controller.ctrl.js",
+  "custom": true,
+  "properties": [
+    {
+      "label": "Label",
+      "name": "label",
+      "showFor": "properties.labelHidden.value === false",
+      "type": "text",
+      "defaultValue": "Default label",
+      "bond": "interpolation"
+    },
+    {
+      "label": "Label position",
+      "name": "labelPosition",
+      "showFor": "properties.labelHidden.value === false",
+      "type": "choice",
+      "defaultValue": "top",
+      "choiceValues": [
+        "left",
+        "top"
+      ],
+      "bond": "constant"
+    },
+    {
+      "label": "Zoom",
+      "name": "maximumZoom",
+      "type": "integer",
+      "help": "Choose a default value for zoom",
+      "defaultValue": "11",
+      "bond": "expression"
+    },
+    {
+      "label": "Google API Key",
+      "name": "googleKey",
+      "type": "text",
+      "help": "This is the Google API Map Key",
+      "bond": "expression"
+    },
+    {
+      "label": "Places",
+      "name": "places",
+      "type": "text",
+      "help": "Position and label of markers to put on the map",
+      "bond": "variable"
+    },
+    {
+      "label": "Height",
+      "name": "height",
+      "type": "text",
+      "help": "Height of the iFrame in px",
+      "defaultValue": "400",
+      "bond": "expression"
+    },
+    {
+      "label": "Hidden",
+      "name": "hidden",
+      "type": "boolean",
+      "help": "Hide the widget",
+      "defaultValue": false,
+      "bond": "expression"
+    },
+    {
+      "label": "Label hidden",
+      "name": "labelHidden",
+      "type": "boolean",
+      "defaultValue": false,
+      "bond": "constant"
+    }
+    
+  ],
+  "assets": [
+    {
+      "name": "style.css",
+      "type": "css",
+      "order": 1,
+      "external": false
+    }, 
+    {
+      "name": "ng-map.min.js",
+      "type": "js",
+      "order": 1,
+      "external": false
+    }
+  ], 
+  "requiredModules": [
+    "ngMap"
+  ]
+}

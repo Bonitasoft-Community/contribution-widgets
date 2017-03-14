@@ -1,0 +1,40 @@
+{
+  "name": "widget-seed",
+  "version": "1.0.0",
+  "description": "A seed project to create widget for the UI Designer",
+  "author": "bonitasoft",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bonitasoft/bonita-widget-seed.git"
+  },
+  "license": "SEE LICENSE IN LICENSE",
+  "engines": {
+    "node": ">=4.2.0"
+  },
+  "devDependencies": {
+    "angular": "1.3.18",
+    "angular-mocks": "1.3.18",
+    "gulp": "3.9.0",
+    "gulp-clean": "0.3.1",
+    "gulp-rename": "1.2.2",
+    "gulp-util": "3.0.7",
+    "gulp-zip": "3.0.2",
+    "jasmine-core": "2.3.4",
+    "karma": "1.3.0",
+    "karma-jasmine-jquery": "0.1.1",
+    "karma-jasmine": "1.0.2",
+    "karma-phantomjs-launcher": "1.0.2",
+    "merge-stream": "1.0.0",
+    "phantomjs-prebuilt": "2.1.13",
+    "promise": "7.0.4",
+    "request": "2.64.0",
+    "widget-builder": "bonitasoft/widget-builder#1.0.0",
+    "yargs": "3.27.0"
+  },
+  "scripts": {
+    "clean": "gulp clean",
+    "build": "gulp",
+    "deploy": "gulp deploy",
+    "test": "gulp test"
+  }
+}

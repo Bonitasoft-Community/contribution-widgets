@@ -1,0 +1,135 @@
+{
+  "id": "customFileUpload",
+  "name": "fileUpload",
+  "template": "@template.tpl.html",
+  "controller": "@controller.ctrl.js",
+  "description": "File chooser for uploading a document to a form",
+  "custom": true,
+  "properties": [
+    {
+      "label": "Required",
+      "name": "required",
+      "help": "In the context of a form container, use $form.$invalid as a Boolean to check form validity in a widget property",
+      "type": "boolean",
+      "defaultValue": false,
+      "bond": "expression"
+    },
+    {
+      "label": "Read only",
+      "name": "readOnly",
+      "help": "The current file can not be modified",
+      "type": "boolean",
+      "defaultValue": false,
+      "bond": "expression"
+    },
+    {
+      "label": "Label hidden",
+      "name": "labelHidden",
+      "type": "boolean",
+      "defaultValue": false,
+      "bond": "expression"
+    },
+    {
+      "label": "Label",
+      "name": "label",
+      "showFor": "properties.labelHidden.value === false",
+      "type": "text",
+      "defaultValue": "Default label",
+      "bond": "interpolation"
+    },
+    {
+      "label": "Label position",
+      "name": "labelPosition",
+      "showFor": "properties.labelHidden.value === false",
+      "type": "choice",
+      "defaultValue": "top",
+      "choiceValues": [
+        "left",
+        "top"
+      ],
+      "bond": "constant"
+    },
+    {
+      "label": "Label width",
+      "name": "labelWidth",
+      "showFor": "properties.labelHidden.value === false",
+      "type": "integer",
+      "defaultValue": 4,
+      "bond": "constant",
+      "constraints": {
+        "min": "1",
+        "max": "12"
+      }
+    },
+    {
+      "label": "Placeholder",
+      "name": "placeholder",
+      "help": "Short hint that describes the expected value",
+      "type": "text",
+      "bond": "interpolation"
+    },
+    {
+      "label": "URL",
+      "name": "url",
+      "help": "Defines endpoint URL where the file will be uploaded",
+      "type": "text",
+      "defaultValue": "../API/formFileUpload",
+      "bond": "expression"
+    },
+    {
+      "label": "New File",
+      "name": "newFile",
+      "caption": "Any variable: <i>myData</i> or <i>myData.attribute</i>",
+      "help": "Holds the response from the upload endpoint. That value can be used to fulfill a contract",
+      "type": "text",
+      "bond": "variable"
+    },
+    {
+      "label": "Existing file",
+      "name": "currentFile",
+      "caption": "Any variable: <i>myData</i> or <i>myData.attribute</i>",
+      "help": "Display a download link for the current document. Will be empty if a new file is uploaded or the current file is removed.",
+      "type": "text",
+      "bond": "variable"
+    },
+    {
+      "label": "File deleted",
+      "name": "deleteFile",
+      "caption": "Any boolean variable: <i>myData</i> or <i>myData.attribute</i>",
+      "help": "Holds the boolean value from the widget indicates whether or not the file has been deleted by the user.",
+      "type": "boolean",
+      "bond": "variable"
+    },
+    {
+      "label": "Error on upload holder",
+      "name": "errorContent",
+      "help": "Holds the response content from the upload error endpoint. That value can be used to guidance purpose",
+      "type": "text",
+      "bond": "variable"
+    }
+  ],
+  "assets": [
+    {
+      "name": "ng-upload-0.5.19-patched.min.js",
+      "type": "js",
+      "order": 1,
+      "external": false
+    },
+    {
+      "name": "ui-bootstrap-tpls-2.5.0.min.js",
+      "type": "js",
+      "order": 1,
+      "external": false
+    },
+    {
+      "name": "style.css",
+      "type": "css",
+      "order": 1,
+      "external": false
+    }
+  ],
+  "requiredModules": [
+    "ngUpload",
+    "ui.bootstrap"
+  ]
+}
