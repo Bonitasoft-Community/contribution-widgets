@@ -1,7 +1,10 @@
-# Widget seed project
+# Bonitasoft Community contribution widgets
 
-This is a template to start building custom widgets for the UI Designer.  
-It includes build, test and deployment steps and supports multiple widgets.
+This is a repository that provide a place for the Community to build and share their custom widgets. 
+
+You can browse the list of widgets available in the src/widgets folder. Follow the instructions below to understand how to setup your environment and deploy the widgets.
+
+A framework is provided to start building custom widgets for the UI Designer. It includes build, test and deployment steps and supports multiple widgets.
 
 The build step will create a `dist` folder with resulting directive and a zip file directly importable
 in the UI designer or via command line using `deploy` step.
@@ -133,3 +136,7 @@ The assets folder contains the widget dependencies. Those asset have to be decla
 ## UI Designer compatibility
 
 Widget built with this project can be deployed to the UI Designer. However, it's not possible to export a widget from the UI Designer and import it in this project. 
+
+## Contribute
+
+If you are interested in creating new widgets, take a look to the [Contribution guidelines](CONTRIBUTING.md)
