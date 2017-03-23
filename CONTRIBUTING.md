@@ -21,7 +21,7 @@ This project adheres to the [Contributor Covenant code of conduct](http://contri
 
 # Report an issue
 
-Bugs, enhancement and new widgets are tracked as [GitHub issues](https://github.com/lio-p/bonita-widget-seed/issues). Refer to the [GitHub documentation](https://guides.github.com/features/issues/) to learn how to use Issues. 
+Bugs, enhancement and new widgets are tracked as [GitHub issues](https://github.com/Bonitasoft-Community/contribution-widgets/issues). Refer to the [GitHub documentation](https://guides.github.com/features/issues/) to learn how to use Issues. 
 
 Use proper label to categorize the issues:
 * **bugs** to report a bug
