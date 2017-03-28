@@ -1,0 +1,22 @@
+<div
+        isteven-multi-select
+        input-model="properties.availableValues"
+        output-model="properties.value"
+        button-label="{{properties.buttonLabel}}"
+        item-label="{{properties.itemLabel}}"
+        tick-property="ticked"
+        ng-if="properties.outputProperties && properties.outputProperties!==''"
+        output-properties="{{properties.outputProperties}}"
+>
+</div>
+<div
+        isteven-multi-select
+        input-model="properties.availableValues"
+        output-model="properties.value"
+        button-label="{{properties.buttonLabel}}"
+        item-label="{{properties.itemLabel}}"
+        tick-property="ticked"
+        ng-if="!properties.outputProperties || properties.outputProperties==''"
+>
+</div>
+

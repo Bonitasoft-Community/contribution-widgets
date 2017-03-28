@@ -1,0 +1,63 @@
+{
+  "id": "customMultiSelection",
+  "name": "MultiSelectionWidget",
+  "template": "@template.tpl.html",
+  "controller": "@controller.ctrl.js",
+  "custom": true,
+  "properties": [
+    {
+      "label": "Value",
+      "name": "value",
+      "type": "text",
+      "defaultValue": "",
+      "bond": "variable"
+    },
+    {
+      "label": "Available values",
+      "name": "availableValues",
+      "type": "text",
+      "defaultValue": "This is the initial value",
+      "bond": "expression"
+    },
+    {
+      "label": "Button Label",
+      "name": "buttonLabel",
+      "type": "text",
+      "help": "Labels displayed in the widget when an item is selected, it has to be space separated",
+      "defaultValue": "name surname",
+      "bond": "expression"
+    },
+    {
+      "label": "Item Label",
+      "name": "itemLabel",
+      "type": "text",
+      "help": "Labels displayed in the list of items to select, it has to be space separated",
+      "defaultValue": "name surname",
+      "bond": "expression"
+    },
+    {
+      "label": "Output Properties",
+      "name": "outputProperties",
+      "type": "text",
+      "defaultValue": "Object atributes we want to return, it has to be space separated or empty if we want the whole object",
+      "bond": "expression"
+    }
+  ],
+  "assets": [
+    {
+      "name": "isteven-multi-select.css",
+      "type": "css",
+      "external": false,
+      "order": 2
+    },
+    {
+      "name": "isteven-multi-select.js",
+      "type": "js",
+      "external": false,
+      "order": 1
+    }
+  ],
+  "requiredModules": [
+    "isteven-multi-select"
+  ]
+}
