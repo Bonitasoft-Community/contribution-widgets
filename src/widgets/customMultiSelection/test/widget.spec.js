@@ -4,7 +4,8 @@ describe('Widget', function () {
 
   // add both, module required by the widget and locally defined ones
   beforeEach(function () {
-    jasmine.getJSONFixtures().fixturesPath = 'base/src/widgets/customMultiSelect/';
+
+    jasmine.getJSONFixtures().fixturesPath = 'base/src/widgets/customMultiSelection/';
     loadJSONFixtures('widget.json');
     
     (getJSONFixture('widget.json').requiredModules || []).concat([
