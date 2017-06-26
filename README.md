@@ -1,6 +1,6 @@
 # Bonitasoft Community contribution widgets
 
-This is a repository that provide a place for the Community to build and share their custom widgets. 
+This is a repository that provide a place for the Community to build and share their custom widgets.
 
 You can browse the list of widgets available in the src/widgets folder. Follow the instructions below to understand how to setup your environment and deploy the widgets.
 
@@ -51,11 +51,17 @@ npm run deploy -- --widget <widget name> [--host <ui designer url>] [--force] [-
 
 e.g. `npm run deploy -- --widget customWidget --host http://127.0.0.1:8080/designer --force --watch`
 
-## Widget structure 
+You can also deploy all the widgets at once.
+
+```
+npm run deployAll -- [--host <ui designer url>] [--force]
+```
+
+## Widget structure
 
 Below is the description of the files used to build a widget.
 
-### Controller 
+### Controller
 
 The file is named controller.ctrl.js
 
@@ -63,7 +69,7 @@ It contains the widget logic
 
 ### Template
 
-The file is named template.tpl.html 
+The file is named template.tpl.html
 
 It contains the widget template
 
@@ -131,11 +137,11 @@ If contains the widget model.
 
 ### Assets folder
 
-The assets folder contains the widget dependencies. Those asset have to be declared in the widget model. 
+The assets folder contains the widget dependencies. Those asset have to be declared in the widget model.
 
 ## UI Designer compatibility
 
-Widget built with this project can be deployed to the UI Designer. However, it's not possible to export a widget from the UI Designer and import it in this project. 
+Widget built with this project can be deployed to the UI Designer. However, it's not possible to export a widget from the UI Designer and import it in this project.
 
 ## Contribute
 
