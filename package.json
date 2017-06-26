@@ -35,6 +35,7 @@
     "clean": "gulp clean",
     "build": "gulp",
     "deploy": "gulp deploy",
-    "test": "gulp test"
+    "test": "gulp test",
+    "deployAll": "gulp deployAll"
   }
 }

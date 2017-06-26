@@ -22,9 +22,12 @@ function logDeploymentResult(err, body) {
 
 function deploy(host, force) {
 
-  var stream = new Writable({objectMode: true});
-  stream._write = function (file, encoding, callback) {
+  var stream = new Writable({
+    objectMode: true
+  });
 
+  stream._write = function(file, encoding, callback) {
+    console.log("deploy: " + file.path)
     request.post({
       uri: host + '/import/widget',
       qs: {
@@ -33,7 +36,7 @@ function deploy(host, force) {
       formData: {
         file: fs.createReadStream(file.path)
       }
-    }, function (err, resp, body) {
+    }, function(err, resp, body) {
       logDeploymentResult(err, body);
       callback();
     });
