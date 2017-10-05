@@ -16,16 +16,16 @@
                  error-catcher="ctrl.uploadError(error)"
                  upload-options-enable-csrf
                  upload-options-csrf-param="CSRFToken">
-                <div class="input-group">
-                  
+                <div class="input-group file-upload">
+
                     <input type="text" ng-readonly="!ctrl.newFile" ng-focus="ctrl.preventFocus($event)" placeholder="{{properties.placeholder | uiTranslate}}" value="{{ctrl.filename}}" class="form-control" />
-                  
+
                     <input class="custom-file-upload-input"
                              ng-class="{'file-upload-input--disabled':$isUploading}"
                              name="{{ctrl.name}}" type="file"
                              ng-required="properties.required"
                              ng-model="ctrl.filemodel"
-                             
+
                              />
                   <button type="button" ng-if="ctrl.filemodel" ng-click="ctrl.clear()" class="custom-file-upload-clear">
                         <i class="glyphicon glyphicon-remove-circle"></i>
@@ -50,9 +50,9 @@
                   </div>
                 </div>
             </form>
+
+
           
-            
-          </div>
 
 
             <div ng-messages="$form[ctrl.name].$dirty && $form[ctrl.name].$error " ng-messages-include="forms-generic-errors.html" role="alert"></div>
